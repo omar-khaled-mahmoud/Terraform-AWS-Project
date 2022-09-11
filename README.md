@@ -18,6 +18,10 @@ dynamodb_table = "terraform-up-and-running-locks111"
 
  }
 
-whenever you will use terraform init, it will connect to this backend and perform updated to the s3 bucket
+whenever you will use terraform init, it will connect to this backend and perform updated to the s3 bucket and every change will update the s3 remote state file automatically 
 
+--note :
+The terraform state pull command is used to manually download and output the state from remote state. This command also works with local state.
+
+The terraform state push command is used to manually upload a local state file to remote state. This command also works with local state
 
