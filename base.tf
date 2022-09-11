@@ -168,6 +168,6 @@ resource "aws_lb_listener" "front_end" {
  region = "us-east-1"
  bucket = "terraform-up-and-running-state111"
  key = "terraform.tfstate"
- dynamodb_table = "terraform-up-and-running-locks111"
+# dynamodb_table = "terraform-up-and-running-locks111"
  }
  }
