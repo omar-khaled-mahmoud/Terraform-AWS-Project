@@ -17,3 +17,7 @@ dynamodb_table = "terraform-up-and-running-locks111"
  }
 
 whenever you will use terraform init, it will connect to this backend and perform updated to the s3 bucket
+
+OR
+
+--you can create the s3 bucket and it's configs + dynamodb table, then comment the section of the terraform back end and deploy the infrastructure , then uncomment this section and send the statefile to the s3 bucket.
