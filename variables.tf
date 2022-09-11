@@ -3,22 +3,25 @@ description = "The AWS region."
 }
 variable "prefix" {
 description = "The name of our org, e.g., examplecom."
+  default = "vodafone.com"
 }
 variable "environment" {
 description = "The name of our environment, e.g., development."
+default = "development"
 }
 variable "key_name" {
 description = "The AWS key pair to use for resources."
 }
 variable "vpc_cidr" {
 description = "The CIDR of the VPC."
+  default = "10.0.0.0/16"
 }
 variable "public_subnets" {
-default = []
+default = ["10.0.1.0/24","10.0.2.0/24"]
 description = "The list of public subnets to populate."
 }
 variable "private_subnets" {
-default = []
+default = ["10.0.3.0/24","10.0.4.0/24"]
 description = "The list of private subnets to populate."
 }
 
