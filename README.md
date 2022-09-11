@@ -1,6 +1,9 @@
 # Terraform-AWS-Project
 
 
+PLEASE CLICK ON EDIT TO SEE PROPERLY
+
+
 --please note that when you want to use s3 bucket as a remote terraform state file, the s3 bucket and the dynamo db must exist in advance , before terraform init, the section which tells terraform , please connect the state file to the backend > s3 is this section :
 
 terraform {
