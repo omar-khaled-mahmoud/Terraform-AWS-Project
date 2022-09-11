@@ -1,9 +1,7 @@
 provider "aws" {
 region = "${var.region}"
 }
-module "remote_state" {
-source = "./remote_state"
-}
+
 module "vpc" {
 source = "./vpc"
 environment = "${var.environment}"
