@@ -166,7 +166,7 @@ resource "aws_lb_listener" "front_end" {
  terraform {
  backend "s3" {
  region = "us-east-1"
- bucket = "examplecom-remote-state-development111"
+ bucket = "terraform-up-and-running-state111"
  key = "terraform.tfstate"
  }
  }
