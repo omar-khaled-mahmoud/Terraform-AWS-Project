@@ -25,3 +25,19 @@ The terraform state pull command is used to manually download and output the sta
 
 The terraform state push command is used to manually upload a local state file to remote state. This command also works with local state
 
+--note :
+Terraform local values (or "locals") is just as a nick name to an expression , so we can use this name later in a tag or something
+
+example:
+
+locals {
+  name_suffix = "${var.resource_tags["project"]}-${var.resource_tags["environment"]}"
+}
+
+ module "vpc" {
+   source  = "terraform-aws-modules/vpc/aws"
+   version = "2.66.0"
+
+   name = "vpc-${local.name_suffix}"        <<<<<
+   ## ...
+ }
