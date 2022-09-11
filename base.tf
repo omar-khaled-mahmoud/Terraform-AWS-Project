@@ -163,10 +163,10 @@ resource "aws_lb_listener" "front_end" {
 # value = ["${module.vpc.private_subnet_ids}"]
 # }
 
-# # terraform {
-# # backend "s3" {
-# # region = "us-east-1"
-# # bucket = "examplecom-remote-state-development111"
-# # key = "terraform.tfstate"
-# # }
-# # }
+ terraform {
+ backend "s3" {
+ region = "us-east-1"
+ bucket = "examplecom-remote-state-development111"
+ key = "terraform.tfstate"
+ }
+ }
